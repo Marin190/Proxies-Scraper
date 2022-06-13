@@ -1,4 +1,4 @@
-# Proxies-Scrapper
+# Proxies-Scraper
 proxies scraper in terminal, Proxies update all 3 hours
 
 
