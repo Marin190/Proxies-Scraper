@@ -32,23 +32,17 @@ def choices():
     │ {Colors.green}Proxies :{Colors.end}
     ├──────────
     │
-    │ [{Colors.green}1{Colors.end}] HTTP                [{Colors.green}4{Colors.end}] socks 3
+    │ [{Colors.green}1{Colors.end}] HTTP                [{Colors.green}4{Colors.end}] socks 5
     │ [{Colors.green}2{Colors.end}] HTTPS               [{Colors.green}5{Colors.end}] socks 4           [{Colors.green}5{Colors.end}] All
     │''')
     choice = input("    └───> ")
 
-    if choice == "1":
-   		Proxies("-http")
-    elif choice == "2":
-   		Proxies("-https")
-    elif choice == "3":
-   		Proxies("-socks4")
-    elif choice == "4":
-   		Proxies("-socks5")
-    elif choice == "5":
-   		Proxies("")
-    else:
-   		choices()
+    if choice == "1": Proxies("-http")
+    elif choice == "2": Proxies("-https")
+    elif choice == "3": Proxies("-socks4")
+    elif choice == "4": Proxies("-socks5")
+    elif choice == "5": Proxies("")
+    else: choices()
 
 def Proxies(Type):
     r = get(f'https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies{Type}.txt')
