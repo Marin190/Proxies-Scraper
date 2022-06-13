@@ -32,9 +32,8 @@ def choices():
     │ {Colors.green}Proxies :{Colors.end}
     ├──────────
     │
-    │ [{Colors.green}1{Colors.end}] HTTP                [{Colors.green}4{Colors.end}] socks 4
-    │ [{Colors.green}2{Colors.end}] HTTPS               [{Colors.green}5{Colors.end}] socks 5           [{Colors.green}7{Colors.end}] All
-    │ [{Colors.green}3{Colors.end}] HTTP + HTTPS        [{Colors.green}6{Colors.end}] socks 4 + 5
+    │ [{Colors.green}1{Colors.end}] HTTP                [{Colors.green}4{Colors.end}] socks 3
+    │ [{Colors.green}2{Colors.end}] HTTPS               [{Colors.green}5{Colors.end}] socks 4           [{Colors.green}5{Colors.end}] All
     │''')
     choice = input("    └───> ")
 
@@ -43,14 +42,10 @@ def choices():
     elif choice == "2":
    		Proxies("-https")
     elif choice == "3":
-   		Proxies("-http+https")
-    elif choice == "4":
    		Proxies("-socks4")
-    elif choice == "5":
+    elif choice == "4":
    		Proxies("-socks5")
-    elif choice == "6":
-   		Proxies("-socks4+5")
-    elif choice == "7":
+    elif choice == "5":
    		Proxies("")
     else:
    		choices()
